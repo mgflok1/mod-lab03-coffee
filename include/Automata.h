@@ -1,7 +1,4 @@
-
-//
-// Created by Максим Глвдков on 09.04.2024.
-//
+// Copyright 2020 GHA Test Team
 
 INCLUDE_AUTOMATA_H_
 #define AUTOMATA_H

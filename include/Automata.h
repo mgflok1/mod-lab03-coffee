@@ -3,7 +3,7 @@
 // Created by Максим Глвдков on 09.04.2024.
 //
 
-#ifndef AUTOMATA_H
+INCLUDE_AUTOMATA_H_
 #define AUTOMATA_H
 
 #include <string>
@@ -12,19 +12,20 @@
 enum STATES {OFF, WAIT, ACCEPT, CHECK, COOK};
 
 class Automata {
-private:
+private: 
     int cash;
     std::vector<std::string> menu;
     std::vector<int> prices;
     STATES state;
 
-public:
+public: 
     Automata();
 
     void on();
     void off();
     void coin(int money);
-    void getMenu(const std::vector<std::string>& menu, const std::vector<int>& prices);
+    void getMenu(const std::vector<std::string>& menu, 
+const std::vector<int>& prices);
     STATES getState();
     void choice(int option);
     bool check(int option);
@@ -33,4 +34,4 @@ public:
     void finish();
 };
 
-#endif //AUTOMATA_H
+#endif  // INCLUDE_AUTOMATA_H_

@@ -18,7 +18,7 @@ TEST(AutomataTest, AddCoin) {
     Automata vendingMachine;
     vendingMachine.on();
     vendingMachine.coin(10);
-    EXPECT_EQ(vendingMachine.getState(), WAIT); 
+    EXPECT_EQ(vendingMachine.getState(), WAIT);
 }
 
 TEST(AutomataTest, GetMenu) {
@@ -36,7 +36,7 @@ TEST(AutomataTest, ChoiceAndCheck) {
     vendingMachine.getMenu(menu, prices);
     vendingMachine.coin(15);
     vendingMachine.choice(0);
-    EXPECT_TRUE(vendingMachine.check(0)); 
+    EXPECT_TRUE(vendingMachine.check(0));
 }
 
 TEST(AutomataTest, Cancel) {
@@ -44,8 +44,8 @@ TEST(AutomataTest, Cancel) {
     vendingMachine.on();
     vendingMachine.coin(10);
     vendingMachine.cancel();
-    EXPECT_EQ(vendingMachine.getState(), WAIT); 
-    EXPECT_EQ(vendingMachine.getCash(), 0); 
+    EXPECT_EQ(vendingMachine.getState(), WAIT);
+    EXPECT_EQ(vendingMachine.getCash(), 0);
 }
 
 TEST(AutomataTest, CookAndFinish) {
@@ -55,10 +55,10 @@ TEST(AutomataTest, CookAndFinish) {
     std::vector<int> prices = {10};
     vendingMachine.getMenu(menu, prices);
     vendingMachine.coin(15);
-    vendingMachine.choice(0); 
+    vendingMachine.choice(0);
     vendingMachine.check(0);
-    vendingMachine.cook(); 
-    vendingMachine.finish(); 
+    vendingMachine.cook();
+    vendingMachine.finish();
     EXPECT_EQ(vendingMachine.getState(), WAIT);
     EXPECT_EQ(vendingMachine.getCash(), 0);
 }

@@ -20,8 +20,8 @@ void Automata::off() {
 
 void Automata::coin(int money) {
     cash += money;
-    std::cout << "Добавлено " << money << " рублей. 
-        Текущий баланс " << cash << "\n";
+    std::cout << "Добавлено " << money << " рублей. " 
+    std::cout <<  "Текущий баланс " << cash << "\n";
 }
 
 void Automata::getMenu(const std::vector<std::string>& menu,
@@ -37,8 +37,8 @@ STATES Automata::getState() {
 void Automata::choice(int option) {
     if (option >= 0 && option < menu.size()) {
         state = CHECK;
-        std::cout << "Выбрано: " << menu[option] 
-            << ". Пожалуйста, подождите, пока пройдет проверка\n";
+        std::cout << "Выбрано: " << menu[option];
+        std::cout << ". Пожалуйста, подождите, пока пройдет проверка\n";
     } else {
         std::cout << "Invalid option.\n";
     }

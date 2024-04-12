@@ -1,7 +1,7 @@
 // Copyright 2020 GHA Test Team
 
-INCLUDE_AUTOMATA_H_
-#define AUTOMATA_H
+#ifndef INCLUDE_AUTOMATA_H_
+#define INCLUDE_AUTOMATA_H_
 
 #include <string>
 #include <vector>
@@ -9,19 +9,19 @@ INCLUDE_AUTOMATA_H_
 enum STATES {OFF, WAIT, ACCEPT, CHECK, COOK};
 
 class Automata {
-private: 
+    private:
     int cash;
     std::vector<std::string> menu;
     std::vector<int> prices;
     STATES state;
 
-public: 
+    public:
     Automata();
 
     void on();
     void off();
     void coin(int money);
-    void getMenu(const std::vector<std::string>& menu, 
+    void getMenu(const std::vector<std::string>& menu,
 const std::vector<int>& prices);
     STATES getState();
     void choice(int option);

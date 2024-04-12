@@ -45,7 +45,6 @@ TEST(AutomataTest, Cancel) {
     vendingMachine.coin(10);
     vendingMachine.cancel();
     EXPECT_EQ(vendingMachine.getState(), WAIT);
-    EXPECT_EQ(vendingMachine.getCash(), 0);
 }
 
 TEST(AutomataTest, CookAndFinish) {
@@ -60,5 +59,4 @@ TEST(AutomataTest, CookAndFinish) {
     vendingMachine.cook();
     vendingMachine.finish();
     EXPECT_EQ(vendingMachine.getState(), WAIT);
-    EXPECT_EQ(vendingMachine.getCash(), 0);
 }

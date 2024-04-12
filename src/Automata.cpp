@@ -18,7 +18,7 @@ void Automata::off() {
     std::cout << "Автомат выключен\n";
 }
 
-void Automata::getCash() {
+int Automata::getCash() {
     return cash;
 }
 

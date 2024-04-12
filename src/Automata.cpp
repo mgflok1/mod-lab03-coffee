@@ -18,10 +18,6 @@ void Automata::off() {
     std::cout << "Автомат выключен\n";
 }
 
-int Automata::getCash() {
-    return cash;
-}
-
 void Automata::coin(int money) {
     cash += money;
     std::cout << "Добавлено " << money << " рублей. ";

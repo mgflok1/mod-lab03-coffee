@@ -20,7 +20,7 @@ void Automata::off() {
 
 void Automata::coin(int money) {
     cash += money;
-    std::cout << "Добавлено " << money << " рублей. " 
+    std::cout << "Добавлено " << money << " рублей. "
     std::cout <<  "Текущий баланс " << cash << "\n";
 }
 

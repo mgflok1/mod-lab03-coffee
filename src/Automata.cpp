@@ -1,3 +1,5 @@
+// Copyright 2022 GHA Test Team
+
 #include "Automata.h"
 #include <iostream>
 
@@ -18,10 +20,12 @@ void Automata::off() {
 
 void Automata::coin(int money) {
     cash += money;
-    std::cout << "Добавлено " << money << " рублей. Текущий баланс " << cash << "\n";
+    std::cout << "Добавлено " << money << " рублей. 
+        Текущий баланс " << cash << "\n";
 }
 
-void Automata::getMenu(const std::vector<std::string>& menu, const std::vector<int>& prices) {
+void Automata::getMenu(const std::vector<std::string>& menu,
+const std::vector<int>& prices) {
     this->menu = menu;
     this->prices = prices;
 }
@@ -33,7 +37,8 @@ STATES Automata::getState() {
 void Automata::choice(int option) {
     if (option >= 0 && option < menu.size()) {
         state = CHECK;
-        std::cout << "Выбрано: " << menu[option] << ". Пожалуйста, подождите, пока пройдет проверка\n";
+        std::cout << "Выбрано: " << menu[option] 
+            << ". Пожалуйста, подождите, пока пройдет проверка\n";
     } else {
         std::cout << "Invalid option.\n";
     }
